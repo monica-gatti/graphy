@@ -1,11 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { GraphMap } from './graph-map/graph-map';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.scss',
-  templateUrl: './app.html',
+  imports: [GraphMap],
+  template: `<app-graph-map />`,
 })
-export class App {
-  protected readonly title = signal('graphy');
-}
+export class App {}

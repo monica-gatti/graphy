@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    { "id": "rennes", "label": "Rennes", "lat": 48.1173, "lng": -1.6778 },
+    { "id": "romagne", "label": "Romagné", "lat": 48.3436, "lng": -1.2803 },
+    { "id": "nantes", "label": "Nantes", "lat": 47.2184, "lng": -1.5536 }
+  ],
+  "edges": [
+    { "from": "rennes", "to": "romagne", "weight": 3 },
+    { "from": "rennes", "to": "nantes", "weight": 5 }
+  ]
+}
