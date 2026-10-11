@@ -1,0 +1,78 @@
+<header class="panel-head">
+  <h2 class="panel-title">Alerts</h2>
+  <p class="badge badge-count" [class.badge-neutral]="!store.alerts().length">
+    {{ store.alerts().length }}<span class="visually-hidden"> active alerts</span>
+  </p>
+</header>
+
+<!-- role="status": screen readers announce new alerts without stealing focus (OUDS accessibility guidance) -->
+<div class="panel-body" role="status">
+  @if (store.alerts().length === 0) {
+    <div class="alert alert-message alert-positive">
+      <div class="alert-icon"><span class="visually-hidden">Positive:</span></div>
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <p class="alert-label">All links working</p>
+          <p>No incident on the network.</p>
+        </div>
+      </div>
+    </div>
+  }
+
+  @for (alert of store.alerts(); track alert.id) {
+    @let open = expandedId() === alert.id;
+    <div
+      class="alert alert-message"
+      [class.alert-negative]="alert.severity === 'critical'"
+      [class.alert-warning]="alert.severity !== 'critical'"
+      [class.is-open]="open"
+      animate.enter="alert-enter"
+    >
+      <div class="alert-icon">
+        <span class="visually-hidden">{{ alert.severity === 'critical' ? 'Critical' : 'Warning' }}:</span>
+      </div>
+
+      <div class="alert-container">
+        <div class="alert-text-container">
+          <h3 class="alert-label">{{ alert.title }}</h3>
+          <p>{{ store.edgeLabel(alert.edgeId) }}</p>
+          <p class="meta">
+            <span class="tag tag-small tag-muted" [class.tag-negative]="alert.severity === 'critical'" [class.tag-warning]="alert.severity !== 'critical'">
+              {{ alert.severity }}
+            </span>
+            {{ alert.id }} · {{ alert.raisedAt | date: 'HH:mm:ss' }}
+          </p>
+        </div>
+
+        @if (open) {
+          <div class="details" [id]="'details-' + alert.id" animate.enter="details-enter">
+            <p>{{ alert.description }}</p>
+            <dl>
+              <dt>Recovery</dt>
+              <dd>{{ alert.eta }}</dd>
+              <dt>Main route</dt>
+              <dd>{{ store.primaryRoute()?.edgeIds?.includes(alert.edgeId) ? 'Affected' : 'Not affected' }}</dd>
+            </dl>
+            <div class="detail-actions">
+              <button type="button" class="link link-compact" (click)="store.focusEdge(alert.edgeId)">Show on map</button>
+              <button type="button" class="link link-compact" (click)="store.showAlternatives.set(true)">See alternatives</button>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="alert-action-container">
+        <button
+          type="button"
+          class="btn btn-icon btn-minimal"
+          [attr.aria-expanded]="open"
+          [attr.aria-controls]="'details-' + alert.id"
+          (click)="toggle(alert.id, alert.edgeId)"
+        >
+          <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+          <span class="visually-hidden">{{ open ? 'Hide' : 'Show' }} details for {{ alert.title }}</span>
+        </button>
+      </div>
+    </div>
+  }
+</div>

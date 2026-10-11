@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "graphy": {
+    "graph-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -31,8 +31,12 @@
               }
             ],
             "styles": [
+              "node_modules/@ouds/web-orange/dist/css/ouds-web.min.css",
               "node_modules/leaflet/dist/leaflet.css",
               "src/styles.scss"
+            ],
+            "allowedCommonJsDependencies": [
+              "leaflet"
             ]
           },
           "configurations": {
@@ -40,8 +44,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1.5MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -63,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "graphy:build:production"
+              "buildTarget": "graph-app:build:production"
             },
             "development": {
-              "buildTarget": "graphy:build:development"
+              "buildTarget": "graph-app:build:development"
             }
           },
           "defaultConfiguration": "development"

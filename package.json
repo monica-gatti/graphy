@@ -1,5 +1,5 @@
 {
-  "name": "graphy",
+  "name": "graph-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -17,6 +17,8 @@
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "@ouds/web-common": "^1.5.0",
+    "@ouds/web-orange": "^1.5.0",
     "leaflet": "^1.9.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"

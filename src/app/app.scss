@@ -1,0 +1,62 @@
+// Layout only: components and tokens come from OUDS Web.
+:host {
+  display: grid;
+  height: 100dvh;
+  grid-template-columns: 24rem minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'top top' 'alerts map' 'alerts bottom';
+}
+.app-header { grid-area: top; }
+.alerts { grid-area: alerts; }
+.map { grid-area: map; }
+
+.navbar .container-fluid { display: flex; flex-wrap: nowrap; align-items: center; gap: 1.5rem; }
+.navbar-brand { display: flex; align-items: center; gap: 1rem; }
+.navbar .title { margin: 0; font-size: 1.25rem; }
+.clock {
+  font-family: var(--bs-font-monospace);
+  font-variant-numeric: tabular-nums;
+  color: var(--bs-color-content-muted);
+}
+
+.bottombar {
+  grid-area: bottom;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bs-color-bg-primary);
+  border-top: 1px solid var(--bs-color-border-default);
+}
+.restart { margin-left: auto; flex: none; }
+
+.routes { display: flex; flex: 1; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.chips-container { flex-wrap: wrap; margin: 0; }
+.swatch {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.25rem;
+  border-radius: 50%;
+}
+.route-detail { margin: 0; font-size: 0.875rem; color: var(--bs-color-content-muted); }
+.chip-enter { animation: chip-in 0.3s ease-out both; }
+@keyframes chip-in { from { opacity: 0; transform: translateY(0.5rem); } }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--bs-color-content-muted);
+  li { display: inline-flex; align-items: center; gap: 0.5rem; }
+  i { display: inline-block; width: 1.5rem; border-top: 3px solid var(--bs-color-content-status-positive); }
+  .l-main { border-top-width: 5px; }
+  .l-ok { opacity: 0.6; }
+  .l-sea { border-top-style: dotted; }
+  .l-ko { border-top-style: dashed; border-top-color: var(--bs-color-content-status-negative); }
+}

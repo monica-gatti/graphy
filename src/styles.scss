@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+// OUDS Web (Orange theme) is loaded first in angular.json: it provides the font, colours and components.
+html, body { height: 100%; margin: 0; }
+
+// Leaflet draws plain SVG paths outside Angular's view encapsulation, so these rules must be global
+.edge-broken {
+  stroke-dasharray: 10 8;
+  animation: edge-flow 0.8s linear infinite;
+}
+@keyframes edge-flow { to { stroke-dashoffset: -18; } }
+@media (prefers-reduced-motion: reduce) { .edge-broken { animation: none; } }
+
+// Grey base map so the coloured graph stands out
+.muted-tiles { filter: grayscale(1) contrast(0.85) brightness(1.08); }
+
+// Leaflet popups and tooltips use the OUDS font and colours
+.leaflet-container { font-family: var(--bs-body-font-family); }
+.leaflet-tooltip.city-label {
+  padding: 0.125rem 0.5rem;
+  font-weight: 700;
+  color: var(--bs-color-content-inverse);
+  background: var(--bs-color-surface-inverse-high);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  &::before { border-right-color: var(--bs-color-surface-inverse-high); }
+}

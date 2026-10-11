@@ -1,11 +1,692 @@
 {
-  "nodes": [
-    { "id": "rennes", "label": "Rennes", "lat": 48.1173, "lng": -1.6778 },
-    { "id": "romagne", "label": "Romagné", "lat": 48.3436, "lng": -1.2803 },
-    { "id": "nantes", "label": "Nantes", "lat": 47.2184, "lng": -1.5536 }
-  ],
-  "edges": [
-    { "from": "rennes", "to": "romagne", "weight": 3 },
-    { "from": "rennes", "to": "nantes", "weight": 5 }
-  ]
+ "name": "Trans-African corridor · Paris → Cape Town",
+ "origin": "paris",
+ "destination": "capetown",
+ "nodes": [
+  {
+   "id": "paris",
+   "label": "Paris",
+   "country": "FR",
+   "lat": 48.8566,
+   "lng": 2.3522
+  },
+  {
+   "id": "lyon",
+   "label": "Lyon",
+   "country": "FR",
+   "lat": 45.764,
+   "lng": 4.8357
+  },
+  {
+   "id": "marseille",
+   "label": "Marseille",
+   "country": "FR",
+   "lat": 43.2965,
+   "lng": 5.3698
+  },
+  {
+   "id": "milan",
+   "label": "Milan",
+   "country": "IT",
+   "lat": 45.4642,
+   "lng": 9.19
+  },
+  {
+   "id": "rome",
+   "label": "Rome",
+   "country": "IT",
+   "lat": 41.9028,
+   "lng": 12.4964
+  },
+  {
+   "id": "palermo",
+   "label": "Palermo",
+   "country": "IT",
+   "lat": 38.1157,
+   "lng": 13.3615
+  },
+  {
+   "id": "barcelona",
+   "label": "Barcelona",
+   "country": "ES",
+   "lat": 41.3874,
+   "lng": 2.1686
+  },
+  {
+   "id": "madrid",
+   "label": "Madrid",
+   "country": "ES",
+   "lat": 40.4168,
+   "lng": -3.7038
+  },
+  {
+   "id": "algeciras",
+   "label": "Algeciras",
+   "country": "ES",
+   "lat": 36.1408,
+   "lng": -5.4562
+  },
+  {
+   "id": "tangier",
+   "label": "Tangier",
+   "country": "MA",
+   "lat": 35.7595,
+   "lng": -5.834
+  },
+  {
+   "id": "casablanca",
+   "label": "Casablanca",
+   "country": "MA",
+   "lat": 33.5731,
+   "lng": -7.5898
+  },
+  {
+   "id": "marrakech",
+   "label": "Marrakech",
+   "country": "MA",
+   "lat": 31.6295,
+   "lng": -7.9811
+  },
+  {
+   "id": "laayoune",
+   "label": "Laâyoune",
+   "country": "EH",
+   "lat": 27.1253,
+   "lng": -13.1625
+  },
+  {
+   "id": "nouakchott",
+   "label": "Nouakchott",
+   "country": "MR",
+   "lat": 18.0735,
+   "lng": -15.9582
+  },
+  {
+   "id": "dakar",
+   "label": "Dakar",
+   "country": "SN",
+   "lat": 14.7167,
+   "lng": -17.4677
+  },
+  {
+   "id": "algiers",
+   "label": "Algiers",
+   "country": "DZ",
+   "lat": 36.7538,
+   "lng": 3.0588
+  },
+  {
+   "id": "tamanrasset",
+   "label": "Tamanrasset",
+   "country": "DZ",
+   "lat": 22.785,
+   "lng": 5.5228
+  },
+  {
+   "id": "tunis",
+   "label": "Tunis",
+   "country": "TN",
+   "lat": 36.8065,
+   "lng": 10.1815
+  },
+  {
+   "id": "tripoli",
+   "label": "Tripoli",
+   "country": "LY",
+   "lat": 32.8872,
+   "lng": 13.1913
+  },
+  {
+   "id": "cairo",
+   "label": "Cairo",
+   "country": "EG",
+   "lat": 30.0444,
+   "lng": 31.2357
+  },
+  {
+   "id": "bamako",
+   "label": "Bamako",
+   "country": "ML",
+   "lat": 12.6392,
+   "lng": -8.0029
+  },
+  {
+   "id": "niamey",
+   "label": "Niamey",
+   "country": "NE",
+   "lat": 13.5116,
+   "lng": 2.1254
+  },
+  {
+   "id": "agadez",
+   "label": "Agadez",
+   "country": "NE",
+   "lat": 16.9742,
+   "lng": 7.9865
+  },
+  {
+   "id": "abidjan",
+   "label": "Abidjan",
+   "country": "CI",
+   "lat": 5.36,
+   "lng": -4.0083
+  },
+  {
+   "id": "accra",
+   "label": "Accra",
+   "country": "GH",
+   "lat": 5.6037,
+   "lng": -0.187
+  },
+  {
+   "id": "lagos",
+   "label": "Lagos",
+   "country": "NG",
+   "lat": 6.5244,
+   "lng": 3.3792
+  },
+  {
+   "id": "kano",
+   "label": "Kano",
+   "country": "NG",
+   "lat": 12.0022,
+   "lng": 8.592
+  },
+  {
+   "id": "abuja",
+   "label": "Abuja",
+   "country": "NG",
+   "lat": 9.0765,
+   "lng": 7.3986
+  },
+  {
+   "id": "ndjamena",
+   "label": "N'Djamena",
+   "country": "TD",
+   "lat": 12.1348,
+   "lng": 15.0557
+  },
+  {
+   "id": "douala",
+   "label": "Douala",
+   "country": "CM",
+   "lat": 4.0511,
+   "lng": 9.7679
+  },
+  {
+   "id": "yaounde",
+   "label": "Yaoundé",
+   "country": "CM",
+   "lat": 3.848,
+   "lng": 11.5021
+  },
+  {
+   "id": "libreville",
+   "label": "Libreville",
+   "country": "GA",
+   "lat": 0.4162,
+   "lng": 9.4673
+  },
+  {
+   "id": "bangui",
+   "label": "Bangui",
+   "country": "CF",
+   "lat": 4.3947,
+   "lng": 18.5582
+  },
+  {
+   "id": "kinshasa",
+   "label": "Kinshasa",
+   "country": "CD",
+   "lat": -4.4419,
+   "lng": 15.2663
+  },
+  {
+   "id": "luanda",
+   "label": "Luanda",
+   "country": "AO",
+   "lat": -8.839,
+   "lng": 13.2894
+  },
+  {
+   "id": "khartoum",
+   "label": "Khartoum",
+   "country": "SD",
+   "lat": 15.5007,
+   "lng": 32.5599
+  },
+  {
+   "id": "addis",
+   "label": "Addis Ababa",
+   "country": "ET",
+   "lat": 8.9806,
+   "lng": 38.7578
+  },
+  {
+   "id": "nairobi",
+   "label": "Nairobi",
+   "country": "KE",
+   "lat": -1.2921,
+   "lng": 36.8219
+  },
+  {
+   "id": "dar",
+   "label": "Dar es Salaam",
+   "country": "TZ",
+   "lat": -6.7924,
+   "lng": 39.2083
+  },
+  {
+   "id": "lusaka",
+   "label": "Lusaka",
+   "country": "ZM",
+   "lat": -15.3875,
+   "lng": 28.3228
+  },
+  {
+   "id": "harare",
+   "label": "Harare",
+   "country": "ZW",
+   "lat": -17.8252,
+   "lng": 31.0335
+  },
+  {
+   "id": "windhoek",
+   "label": "Windhoek",
+   "country": "NA",
+   "lat": -22.5609,
+   "lng": 17.0658
+  },
+  {
+   "id": "gaborone",
+   "label": "Gaborone",
+   "country": "BW",
+   "lat": -24.6282,
+   "lng": 25.9231
+  },
+  {
+   "id": "johannesburg",
+   "label": "Johannesburg",
+   "country": "ZA",
+   "lat": -26.2041,
+   "lng": 28.0473
+  },
+  {
+   "id": "capetown",
+   "label": "Cape Town",
+   "country": "ZA",
+   "lat": -33.9249,
+   "lng": 18.4241
+  }
+ ],
+ "edges": [
+  {
+   "id": "paris-lyon",
+   "from": "paris",
+   "to": "lyon",
+   "mode": "road"
+  },
+  {
+   "id": "lyon-marseille",
+   "from": "lyon",
+   "to": "marseille",
+   "mode": "road"
+  },
+  {
+   "id": "lyon-milan",
+   "from": "lyon",
+   "to": "milan",
+   "mode": "road"
+  },
+  {
+   "id": "milan-rome",
+   "from": "milan",
+   "to": "rome",
+   "mode": "road"
+  },
+  {
+   "id": "rome-palermo",
+   "from": "rome",
+   "to": "palermo",
+   "mode": "road"
+  },
+  {
+   "id": "palermo-tunis",
+   "from": "palermo",
+   "to": "tunis",
+   "mode": "sea"
+  },
+  {
+   "id": "marseille-barcelona",
+   "from": "marseille",
+   "to": "barcelona",
+   "mode": "road"
+  },
+  {
+   "id": "marseille-algiers",
+   "from": "marseille",
+   "to": "algiers",
+   "mode": "sea"
+  },
+  {
+   "id": "barcelona-madrid",
+   "from": "barcelona",
+   "to": "madrid",
+   "mode": "road"
+  },
+  {
+   "id": "madrid-algeciras",
+   "from": "madrid",
+   "to": "algeciras",
+   "mode": "road"
+  },
+  {
+   "id": "algeciras-tangier",
+   "from": "algeciras",
+   "to": "tangier",
+   "mode": "sea"
+  },
+  {
+   "id": "tangier-casablanca",
+   "from": "tangier",
+   "to": "casablanca",
+   "mode": "road"
+  },
+  {
+   "id": "casablanca-marrakech",
+   "from": "casablanca",
+   "to": "marrakech",
+   "mode": "road"
+  },
+  {
+   "id": "marrakech-laayoune",
+   "from": "marrakech",
+   "to": "laayoune",
+   "mode": "road"
+  },
+  {
+   "id": "laayoune-nouakchott",
+   "from": "laayoune",
+   "to": "nouakchott",
+   "mode": "road"
+  },
+  {
+   "id": "nouakchott-dakar",
+   "from": "nouakchott",
+   "to": "dakar",
+   "mode": "road"
+  },
+  {
+   "id": "dakar-bamako",
+   "from": "dakar",
+   "to": "bamako",
+   "mode": "road"
+  },
+  {
+   "id": "bamako-abidjan",
+   "from": "bamako",
+   "to": "abidjan",
+   "mode": "road"
+  },
+  {
+   "id": "bamako-niamey",
+   "from": "bamako",
+   "to": "niamey",
+   "mode": "road"
+  },
+  {
+   "id": "abidjan-accra",
+   "from": "abidjan",
+   "to": "accra",
+   "mode": "road"
+  },
+  {
+   "id": "accra-lagos",
+   "from": "accra",
+   "to": "lagos",
+   "mode": "road"
+  },
+  {
+   "id": "lagos-abuja",
+   "from": "lagos",
+   "to": "abuja",
+   "mode": "road"
+  },
+  {
+   "id": "lagos-douala",
+   "from": "lagos",
+   "to": "douala",
+   "mode": "sea"
+  },
+  {
+   "id": "niamey-kano",
+   "from": "niamey",
+   "to": "kano",
+   "mode": "road"
+  },
+  {
+   "id": "kano-abuja",
+   "from": "kano",
+   "to": "abuja",
+   "mode": "road"
+  },
+  {
+   "id": "algiers-tamanrasset",
+   "from": "algiers",
+   "to": "tamanrasset",
+   "mode": "road"
+  },
+  {
+   "id": "tamanrasset-agadez",
+   "from": "tamanrasset",
+   "to": "agadez",
+   "mode": "road"
+  },
+  {
+   "id": "agadez-niamey",
+   "from": "agadez",
+   "to": "niamey",
+   "mode": "road"
+  },
+  {
+   "id": "agadez-kano",
+   "from": "agadez",
+   "to": "kano",
+   "mode": "road"
+  },
+  {
+   "id": "tunis-algiers",
+   "from": "tunis",
+   "to": "algiers",
+   "mode": "road"
+  },
+  {
+   "id": "tunis-tripoli",
+   "from": "tunis",
+   "to": "tripoli",
+   "mode": "road"
+  },
+  {
+   "id": "tripoli-cairo",
+   "from": "tripoli",
+   "to": "cairo",
+   "mode": "road"
+  },
+  {
+   "id": "tripoli-ndjamena",
+   "from": "tripoli",
+   "to": "ndjamena",
+   "mode": "road"
+  },
+  {
+   "id": "kano-ndjamena",
+   "from": "kano",
+   "to": "ndjamena",
+   "mode": "road"
+  },
+  {
+   "id": "ndjamena-bangui",
+   "from": "ndjamena",
+   "to": "bangui",
+   "mode": "road"
+  },
+  {
+   "id": "abuja-yaounde",
+   "from": "abuja",
+   "to": "yaounde",
+   "mode": "road"
+  },
+  {
+   "id": "douala-yaounde",
+   "from": "douala",
+   "to": "yaounde",
+   "mode": "road"
+  },
+  {
+   "id": "douala-libreville",
+   "from": "douala",
+   "to": "libreville",
+   "mode": "road"
+  },
+  {
+   "id": "yaounde-bangui",
+   "from": "yaounde",
+   "to": "bangui",
+   "mode": "road"
+  },
+  {
+   "id": "libreville-kinshasa",
+   "from": "libreville",
+   "to": "kinshasa",
+   "mode": "road"
+  },
+  {
+   "id": "yaounde-kinshasa",
+   "from": "yaounde",
+   "to": "kinshasa",
+   "mode": "road"
+  },
+  {
+   "id": "bangui-kinshasa",
+   "from": "bangui",
+   "to": "kinshasa",
+   "mode": "road"
+  },
+  {
+   "id": "kinshasa-luanda",
+   "from": "kinshasa",
+   "to": "luanda",
+   "mode": "road"
+  },
+  {
+   "id": "luanda-windhoek",
+   "from": "luanda",
+   "to": "windhoek",
+   "mode": "road"
+  },
+  {
+   "id": "windhoek-capetown",
+   "from": "windhoek",
+   "to": "capetown",
+   "mode": "road"
+  },
+  {
+   "id": "cairo-khartoum",
+   "from": "cairo",
+   "to": "khartoum",
+   "mode": "road"
+  },
+  {
+   "id": "khartoum-addis",
+   "from": "khartoum",
+   "to": "addis",
+   "mode": "road"
+  },
+  {
+   "id": "addis-nairobi",
+   "from": "addis",
+   "to": "nairobi",
+   "mode": "road"
+  },
+  {
+   "id": "nairobi-dar",
+   "from": "nairobi",
+   "to": "dar",
+   "mode": "road"
+  },
+  {
+   "id": "dar-lusaka",
+   "from": "dar",
+   "to": "lusaka",
+   "mode": "road"
+  },
+  {
+   "id": "kinshasa-lusaka",
+   "from": "kinshasa",
+   "to": "lusaka",
+   "mode": "road"
+  },
+  {
+   "id": "luanda-lusaka",
+   "from": "luanda",
+   "to": "lusaka",
+   "mode": "road"
+  },
+  {
+   "id": "lusaka-harare",
+   "from": "lusaka",
+   "to": "harare",
+   "mode": "road"
+  },
+  {
+   "id": "harare-johannesburg",
+   "from": "harare",
+   "to": "johannesburg",
+   "mode": "road"
+  },
+  {
+   "id": "lusaka-gaborone",
+   "from": "lusaka",
+   "to": "gaborone",
+   "mode": "road"
+  },
+  {
+   "id": "gaborone-johannesburg",
+   "from": "gaborone",
+   "to": "johannesburg",
+   "mode": "road"
+  },
+  {
+   "id": "windhoek-gaborone",
+   "from": "windhoek",
+   "to": "gaborone",
+   "mode": "road"
+  },
+  {
+   "id": "johannesburg-capetown",
+   "from": "johannesburg",
+   "to": "capetown",
+   "mode": "road"
+  }
+ ],
+ "incidents": [
+  {
+   "id": "INC-001",
+   "atMs": 8000,
+   "edgeId": "tamanrasset-agadez",
+   "severity": "critical",
+   "title": "Border crossing closed",
+   "description": "Sandstorm and security alert: the Algeria–Niger crossing on the trans-Saharan road is closed until further notice.",
+   "eta": "Unknown (minimum 48 h)"
+  },
+  {
+   "id": "INC-002",
+   "atMs": 10000,
+   "edgeId": "kinshasa-luanda",
+   "severity": "major",
+   "title": "Bridge washed out",
+   "description": "Heavy rain damaged the bridge on the Kinshasa–Luanda road. Trucks can't get through.",
+   "eta": "About 5 days"
+  }
+ ]
 }
